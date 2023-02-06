@@ -13,8 +13,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.onepointit.mim.engineersbcscare.ui.bank_routine.BankRoutineFragment;
 import com.onepointit.mim.engineersbcscare.ui.bcs_routine.BcsRoutineFragment;
+import com.onepointit.mim.engineersbcscare.ui.buy_package.BuyPackageFragment;
 import com.onepointit.mim.engineersbcscare.ui.dashboard.DashboardFragment;
 import com.onepointit.mim.engineersbcscare.ui.notification.NotificationFragment;
 import com.onepointit.mim.engineersbcscare.ui.pdf_section.PdfSectionFragment;
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     DashboardFragment dashboardFragment = new DashboardFragment();
     BcsRoutineFragment bcsRoutineFragment = new BcsRoutineFragment();
-    BankRoutineFragment bankRoutineFragment = new BankRoutineFragment();
+    BuyPackageFragment buyPackageFragment = new BuyPackageFragment();
     PdfSectionFragment pdfSectionFragment = new PdfSectionFragment();
     NotificationFragment notificationFragment = new NotificationFragment();
 
@@ -80,8 +80,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, bcsRoutineFragment).commit();
                 return true;
 
-            case R.id.navigation_bank_routine:
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, bankRoutineFragment).commit();
+            case R.id.navigation_buy_package:
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, buyPackageFragment).commit();
                 return true;
 
             case R.id.navigation_pdf:

@@ -11,9 +11,9 @@
         android:icon="@drawable/ic_routine"
         android:title="BCS Routine" />
     <item
-        android:id="@+id/navigation_bank_routine"
+        android:id="@+id/navigation_buy_package"
         android:icon="@drawable/ic_routine"
-        android:title="Bank Routine" />
+        android:title="Buy Package" />
 
     <item
         android:id="@+id/navigation_pdf"
