@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/black"
+                    android:text="Best Settings for Startups"
+                    android:drawablePadding="@dimen/_5sdp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtDuration"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_2sdp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17ssp"
+                    android:text="3 Month"
+                    android:drawablePadding="@dimen/_5sdp"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_2sdp"
+                    android:textStyle="normal"
+                    android:gravity="center|end"
+                    android:textSize="@dimen/_8ssp"
+                    android:textColor="#0E6A37"
+                    android:text="BDT"
+                    android:drawablePadding="@dimen/_5sdp"/>
+                <TextView
+                    android:id="@+id/txtAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_2sdp"
+                    android:textStyle="normal"
+                    android:gravity="center|start"
+                    android:textSize="@dimen/_22ssp"
+                    android:textColor="#0E6A37"
+                    android:text="15000 "
+                    android:drawablePadding="@dimen/_5sdp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+                <Button
+                    android:id="@+id/btnBuy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buy Now"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_3sdp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                    />
+                <Button
+                    android:id="@+id/btnDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Details"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

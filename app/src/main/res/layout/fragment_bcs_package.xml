@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.buy_package.BcsPackageFragment">
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBcsPackage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="@dimen/_100sdp"
-        android:textAlignment="center"
-        android:text="bcs" />
+        android:padding="@dimen/_5sdp"
+        android:layout_height="match_parent"/>
 
-</FrameLayout>
+
+</LinearLayout>
