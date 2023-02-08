@@ -8,12 +8,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import butterknife.BindView;
+
 public class RegistrationActivity extends AppCompatActivity {
     private Button btnRegistertion;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        App.getComponent().inject(this);
 
         btnRegistertion = findViewById(R.id.btnRegister);
         btnRegistertion.setOnClickListener(new View.OnClickListener() {

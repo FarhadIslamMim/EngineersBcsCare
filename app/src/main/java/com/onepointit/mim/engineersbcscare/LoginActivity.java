@@ -17,6 +17,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        App.getComponent().inject(this);
 
         btnLogin = findViewById(R.id.btnLogin);
         tvRegistrtion = findViewById(R.id.tvRegistration);

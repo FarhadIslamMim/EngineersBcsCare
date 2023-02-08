@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.onepointit.mim.engineersbcscare.App;
 import com.onepointit.mim.engineersbcscare.R;
 
 public class BcsPackageFragment extends Fragment {
@@ -23,6 +24,7 @@ public class BcsPackageFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_bcs_package, container, false);
+        App.getComponent().inject(this);
 
         return root;
     }

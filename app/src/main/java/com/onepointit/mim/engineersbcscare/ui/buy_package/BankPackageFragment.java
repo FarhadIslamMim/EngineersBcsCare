@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.onepointit.mim.engineersbcscare.App;
 import com.onepointit.mim.engineersbcscare.R;
 
 public class BankPackageFragment extends Fragment {
@@ -22,6 +23,7 @@ public class BankPackageFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_bank_package, container, false);
+        App.getComponent().inject(this);
 
         return root;
     }
