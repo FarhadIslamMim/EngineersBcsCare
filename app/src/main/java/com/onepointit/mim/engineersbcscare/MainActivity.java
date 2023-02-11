@@ -63,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
 
 
+
+
     DashboardFragment dashboardFragment = new DashboardFragment();
     BcsRoutineFragment bcsRoutineFragment = new BcsRoutineFragment();
     BuyPackageFragment buyPackageFragment = new BuyPackageFragment();
