@@ -36,14 +36,14 @@ public class MainMenuConstants {
     };
 
     private final int[] menuIcons = new int[]{
-//            R.drawable.btl,
-//            R.drawable.btl,
-//            R.drawable.btl,
-//            R.drawable.btl,
-//            R.drawable.btl,
-//            R.drawable.btl,
-//            R.drawable.btl,
-//            R.drawable.btl,
+            R.drawable.ic_menu,
+            R.drawable.ic_menu,
+            R.drawable.ic_menu,
+            R.drawable.ic_menu,
+            R.drawable.ic_menu,
+            R.drawable.ic_menu,
+            R.drawable.ic_menu,
+            R.drawable.ic_menu,
     };
     private final int[] reportMenuIcons = new int[]{
             R.drawable.ic_menu,

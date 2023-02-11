@@ -2,6 +2,7 @@ package com.onepointit.mim.engineersbcscare;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.ViewTreeObserver;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -18,15 +20,20 @@ import com.onepointit.mim.engineersbcscare.ui.buy_package.BuyPackageFragment;
 import com.onepointit.mim.engineersbcscare.ui.dashboard.DashboardFragment;
 import com.onepointit.mim.engineersbcscare.ui.notification.NotificationFragment;
 import com.onepointit.mim.engineersbcscare.ui.pdf_section.PdfSectionFragment;
+import com.onepointit.mim.engineersbcscare.utils.SharedPrefsUtils;
+import com.onepointit.mim.engineersbcscare.utils.StringConstants;
+
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener  {
-
+    ConstraintLayout llContent;
     BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         App.getComponent().inject(this);
 
         bottomNavigationView = findViewById(R.id.nav_view);
@@ -53,10 +60,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }
         if (id == R.id.action_menu) {
             Toast.makeText(this, "Menu Clicked", Toast.LENGTH_SHORT).show();
-            //Intent intent = new Intent(this, Notification.class);
-            //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            //startActivity(intent);
-            // finish();
+            Intent intent = new Intent(this, MainMenuActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+             finish();
         }
         return true;
     }

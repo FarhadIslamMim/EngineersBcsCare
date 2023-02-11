@@ -4,6 +4,7 @@ package com.onepointit.mim.engineersbcscare.dependency;
 import com.onepointit.mim.engineersbcscare.App;
 import com.onepointit.mim.engineersbcscare.LoginActivity;
 import com.onepointit.mim.engineersbcscare.MainActivity;
+import com.onepointit.mim.engineersbcscare.MainMenuActivity;
 import com.onepointit.mim.engineersbcscare.RegistrationActivity;
 import com.onepointit.mim.engineersbcscare.net.RequestServices;
 import com.onepointit.mim.engineersbcscare.ui.bcs_routine.BcsRoutineFragment;
@@ -36,6 +37,7 @@ public interface AppComponent {
     void inject(BankPackageFragment bankPackageFragment);
 
     void inject(BcsRoutineFragment bcsRoutineFragment);
+    void inject(MainMenuActivity mainMenuActivity);
 
 
 //    void inject(MainMenuModel mainMenuModel);

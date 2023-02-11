@@ -31,20 +31,20 @@ public class BuyPackageFragment extends Fragment {
         // Required empty public constructor
     }
 
-//    @Override
-//    public void onAttach(@NonNull @NotNull Context context) {
-//        super.onAttach(context);
-//        this.context = context;
-//        this.activity = ((Activity) context);
-//    }
+    @Override
+    public void onAttach(@NonNull @NotNull Context context) {
+        super.onAttach(context);
+        this.context = context;
+        this.activity = ((Activity) context);
+    }
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_buy_package, container, false);
         App.getComponent().inject(this);
-//        ((AppCompatActivity) context).setTitle("Leave");
-//
+        ((AppCompatActivity) context).setTitle("Buy Package");
+
 
 
         tabLayout=root.findViewById(R.id.tabLayout);

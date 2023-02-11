@@ -4,9 +4,7 @@ import android.app.Application;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
-
 import androidx.appcompat.app.AppCompatDelegate;
-
 import com.onepointit.mim.engineersbcscare.dependency.AppComponent;
 import com.onepointit.mim.engineersbcscare.dependency.DaggerAppComponent;
 import com.onepointit.mim.engineersbcscare.net.RequestServices;
@@ -51,7 +49,7 @@ public class App extends Application {
         return this;
     }
 
-    //    @Override
+//        @Override
 //    protected void attachBaseContext(Context base) {
 //        super.attachBaseContext(base);
 //        MultiDex.install(this);
