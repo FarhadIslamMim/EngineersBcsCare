@@ -3,25 +3,21 @@ package com.onepointit.mim.engineersbcscare;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.ViewTreeObserver;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.onepointit.mim.engineersbcscare.ui.MainMenuFragment;
 import com.onepointit.mim.engineersbcscare.ui.bcs_routine.BcsRoutineFragment;
 import com.onepointit.mim.engineersbcscare.ui.buy_package.BuyPackageFragment;
 import com.onepointit.mim.engineersbcscare.ui.dashboard.DashboardFragment;
-import com.onepointit.mim.engineersbcscare.ui.notification.NotificationFragment;
+import com.onepointit.mim.engineersbcscare.ui.notification.NotificationActivity;
 import com.onepointit.mim.engineersbcscare.ui.pdf_section.PdfSectionFragment;
-import com.onepointit.mim.engineersbcscare.utils.SharedPrefsUtils;
-import com.onepointit.mim.engineersbcscare.utils.StringConstants;
 
 import butterknife.ButterKnife;
 
@@ -58,12 +54,19 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             //startActivity(intent);
         }
-        if (id == R.id.action_menu) {
-            Toast.makeText(this, "Menu Clicked", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, MainMenuActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        if (id == R.id.action_menu) {
+//            Toast.makeText(this, "Menu Clicked", Toast.LENGTH_SHORT).show();
+//            Intent intent = new Intent(this, MainMenuActivity.class);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//            startActivity(intent);
+//             finish();
+//        }
+        if (id == R.id.action_notification) {
+            Toast.makeText(this, "Notification Clicked", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
+            //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
-             finish();
+            //finish();
         }
         return true;
     }
@@ -76,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     BcsRoutineFragment bcsRoutineFragment = new BcsRoutineFragment();
     BuyPackageFragment buyPackageFragment = new BuyPackageFragment();
     PdfSectionFragment pdfSectionFragment = new PdfSectionFragment();
-    NotificationFragment notificationFragment = new NotificationFragment();
+    MainMenuFragment mainMenuFragment = new MainMenuFragment();
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -98,8 +101,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, pdfSectionFragment).commit();
                 return true;
 
-            case R.id.navigation_notifications:
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, notificationFragment).commit();
+            case R.id.navigation_menu:
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, mainMenuFragment).commit();
                 return true;
         }
 

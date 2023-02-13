@@ -4,15 +4,15 @@ package com.onepointit.mim.engineersbcscare.dependency;
 import com.onepointit.mim.engineersbcscare.App;
 import com.onepointit.mim.engineersbcscare.LoginActivity;
 import com.onepointit.mim.engineersbcscare.MainActivity;
-import com.onepointit.mim.engineersbcscare.MainMenuActivity;
 import com.onepointit.mim.engineersbcscare.RegistrationActivity;
 import com.onepointit.mim.engineersbcscare.net.RequestServices;
+import com.onepointit.mim.engineersbcscare.ui.MainMenuFragment;
 import com.onepointit.mim.engineersbcscare.ui.bcs_routine.BcsRoutineFragment;
 import com.onepointit.mim.engineersbcscare.ui.buy_package.BankPackageFragment;
 import com.onepointit.mim.engineersbcscare.ui.buy_package.BcsPackageFragment;
 import com.onepointit.mim.engineersbcscare.ui.buy_package.BuyPackageFragment;
 import com.onepointit.mim.engineersbcscare.ui.dashboard.DashboardFragment;
-import com.onepointit.mim.engineersbcscare.ui.notification.NotificationFragment;
+import com.onepointit.mim.engineersbcscare.ui.notification.NotificationActivity;
 import com.onepointit.mim.engineersbcscare.ui.pdf_section.PdfSectionFragment;
 
 import dagger.Component;
@@ -28,7 +28,8 @@ public interface AppComponent {
 
     void inject(PdfSectionFragment pdfSectionFragment);
 
-    void inject(NotificationFragment notificationFragment);
+    //void inject(NotificationFragment notificationFragment);
+    void inject(NotificationActivity notificationActivity);
 
     void inject(DashboardFragment dashboardFragment);
 
@@ -37,7 +38,7 @@ public interface AppComponent {
     void inject(BankPackageFragment bankPackageFragment);
 
     void inject(BcsRoutineFragment bcsRoutineFragment);
-    void inject(MainMenuActivity mainMenuActivity);
+    void inject(MainMenuFragment mainMenuFragment);
 
 
 //    void inject(MainMenuModel mainMenuModel);

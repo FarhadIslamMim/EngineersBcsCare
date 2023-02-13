@@ -15,17 +15,11 @@ import android.view.ViewGroup;
 
 import com.onepointit.mim.engineersbcscare.App;
 import com.onepointit.mim.engineersbcscare.R;
-import com.onepointit.mim.engineersbcscare.RecyclerViewAdapter;
 import com.onepointit.mim.engineersbcscare.model.DashboardRecyclerData;
-import com.onepointit.mim.engineersbcscare.model.MainMenuRecyclerData;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-
-import javax.inject.Inject;
-
-import butterknife.BindView;
 
 
 public class DashboardFragment extends Fragment {
