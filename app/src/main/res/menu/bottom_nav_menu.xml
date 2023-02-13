@@ -13,7 +13,7 @@
     <item
         android:id="@+id/navigation_buy_package"
         android:icon="@drawable/ic_routine"
-        android:title="Buy Package" />
+        android:title="Package" />
 
     <item
         android:id="@+id/navigation_pdf"
